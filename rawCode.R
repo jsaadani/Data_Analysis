@@ -31,14 +31,15 @@ plot(cv.tree(tree1), cex.axis=0.8)
 
 #Prune the tree
 pruneTree <- prune.tree(tree1,best=8)
-plot(pruneTree)
-
-
-
-text(pruneTree)
 predPrune <- predict(pruneTree,newdata=testSet,type="class")
 errorPruned <-missClass(values=testSet$activity, prediction=predPrune)
-library(plotrix)
+
+#Plot the final tree
+plot(pruneTree)
+text(pruneTree)
+
+
+
 
 
 
