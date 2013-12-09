@@ -48,6 +48,8 @@ par(mfrow=c(1,1))
 plot(pruneTree)
 text(pruneTree, cex=0.7)
 
+#Accuracy: 88.7% on the test set
+
 
 
 
