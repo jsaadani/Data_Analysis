@@ -24,7 +24,7 @@ missClass = function(values,prediction){sum(prediction!= values)/length(values)}
 errorTrain <- missClass(values=trainSet$activity,prediction=predTrain)
 errorTest <- missClass(values=testSet$activity,prediction=predTest)
 
-#Plot errors
+#PLot errors
 par(mfrow=c(1,2))
 plot(cv.tree(tree1,FUN=prune.tree,method="misclass"),cex.axis=0.8)
 plot(cv.tree(tree1), cex.axis=0.8)
